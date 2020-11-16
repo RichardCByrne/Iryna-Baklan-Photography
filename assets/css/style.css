@@ -1,0 +1,51 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+#burger {
+    font-size: 2rem;
+    padding-right: 1rem;
+    color: #afabab;
+}
+
+main {
+    margin: 2rem 1rem;
+}
+
+h1 {
+    color: #fce711;
+}
+
+.images {
+    justify-content: center;
+}
+
+img {
+    background-size: contain;
+    width: 100%;
+    display: block;
+    margin-right: 0;
+    margin-bottom: 3rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    color: #fce711;
+    border-bottom: #fce711 1px solid;
+}
+
+.instagram, .email {
+    font-size: 1.5rem;
+    color: #afabab;
+    padding: 0 1rem;
+}
