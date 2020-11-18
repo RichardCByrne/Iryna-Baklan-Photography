@@ -71,6 +71,35 @@ div.col, div.row {
     z-index: 1;
 }
 
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    background-color: white;
+    z-index: 2;
+    display: none;
+    transition: all 1s ease-in-out;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    position: relative;
+    top: 4vh;
+}
+
+.sidebar ul li {
+    padding: .5rem;
+}
+
+#close {
+    font-size: 3rem;
+    display: none;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
 /* ------------------------------------------- Images */
 
 .main-container {

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //Desktop Navigation Sub Menu Visibility
     $("#projects").mouseover(function() {
         $("#projects-sub").css("visibility", "visible");
     });
@@ -15,4 +16,17 @@ $(document).ready(function () {
             $("#projects-sub").css("visibility", "hidden");
         });
     };
+
+    //Mobile Burger Icon
+    //Show
+    $("#burger").click(function () {
+        $(".sidebar").css("width", "20rem").css("display", "block");
+        $("#close").css("display", "flex");
+        $("#close").css("visibility", "visible");
+    })
+    //Close
+    $("#close").click(function () {
+        $(".sidebar").css("width", "0").css("display", "none");
+        $("#close").css("visibility", "hidden");
+    })
 });
