@@ -1,51 +1,207 @@
+/* ------------------------------------------- Fonts */
+@font-face {
+    font-family: "Harabara";
+    src:  url("/assets/fonts/Harabara\ Mais\ Demo.otf");
+}
+
+/* ------------------------------------------- General */
 * {
     scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    /* border: 1px red solid; */
 }
 
 body {
-    font-size: 10px;
-    margin: 0;
     text-align: center;
-}
-
-#burger {
-    font-size: 2rem;
-    padding-right: 1rem;
-    color: #afabab;
+    font-family: montserrat, sans-serif;
 }
 
 main {
-    margin: 2rem 1rem;
+    margin: 0 1rem;
+    position: relative;
+    top: 12vh;
+    left: 0;
+    z-index: 0;
 }
 
 h1 {
     color: #fce711;
+    font-size: 3.5rem;
+    font-family: "Harabara", "montserrat", sans-serif;
+    z-index: 2;
 }
 
-.images {
-    justify-content: center;
+.desktop-nav {
+    position: fixed;
+    left: 0;
+}
+
+a {
+    font-size: 1.8rem;
+    color: #afabab;
+    padding: .1rem 2rem;
+}
+
+div.col, div.row {
+    max-width: 100%;
+    padding: 0;
+}
+
+.display {
+    visibility: visible;
+}
+
+/* ------------------------------------------- Nav */
+#burger {
+    font-size: 2.5rem;
+    margin-right: 1.6rem;
+    color: #afabab;
+    position: absolute;
+    top: 2.2rem;
+    right: -.8rem;
+}
+
+#logo {
+    margin: 2rem 1.5rem 2rem 0rem;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+/* ------------------------------------------- Images */
+
+.main-container {
+    display: flex;
+    width: 100%;
+    display: flex;
+    width: 100%;
+    padding: 0 .4rem 8rem .4rem;
+}
+
+.main-col-images {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+
+.images-col {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 .4rem;
 }
 
 img {
-    background-size: contain;
+    padding: 1rem;
+    vertical-align: middle;
     width: 100%;
-    display: block;
-    margin-right: 0;
-    margin-bottom: 3rem;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+/* ------------------------------------------- Footer */
+
+footer {
+    justify-content: center;
+    display: flex;
+    margin: 0 2.75rem;
+    position: relative;
+    z-index: 2;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0;
 }
 
 hr {
     color: #fce711;
-    border-bottom: #fce711 1px solid;
+    border-top: #fce711 1px solid;
+    width: 100%;
 }
 
 .instagram, .email {
-    font-size: 1.5rem;
+    width: 5rem;
+    height: 5rem;
     color: #afabab;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
+}
+
+i {
+    font-size: 2.5rem;
+}
+
+/* ------------------------------------------- >= 992px */
+
+@media screen and (min-width: 992px) {
+    
+    
+    /* Nav */
+    .desktop-nav {
+        display: flex;
+        flex: 25%;
+        max-width: 20%;
+        margin: 0;
+        text-align: left;
+        color: #afabab;
+        position: absolute;
+        top: 21.2vh;
+    }
+
+    #logo {
+        position: fixed;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    #projects {
+        margin: 0;
+    }
+
+    #projects-sub {
+        visibility: hidden;
+
+    }
+
+    li {
+        list-style-type: none;
+        padding: .23rem 2rem .23rem 5.5rem;
+        font-size: 2rem;
+    }
+
+    /* Images */
+
+    .main-col-images {
+        flex: 75%;
+    }
+
+    .images-col {
+        flex: 33%;
+        max-width: 33%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* General */
+    h1 {
+        font-size: 6.5rem;
+    }
+
+    main {
+        margin: 0 3rem;
+    }
+
+    /* Nav */
+
+    #logo {
+        margin: 4rem 4rem;
+    }
 }
