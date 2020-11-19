@@ -80,7 +80,6 @@ div.col, div.row {
     background-color: white;
     z-index: 2;
     display: none;
-    transition: all 1s ease-in-out;
 }
 
 .sidebar ul {
@@ -169,8 +168,6 @@ i {
 /* ------------------------------------------- >= 992px */
 
 @media screen and (min-width: 992px) {
-    
-    
     /* Nav */
     .desktop-nav {
         display: flex;

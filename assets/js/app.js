@@ -20,13 +20,22 @@ $(document).ready(function () {
     //Mobile Burger Icon
     //Show
     $("#burger").click(function () {
-        $(".sidebar").css("width", "20rem").css("display", "block");
+        let sidebar = $(".sidebar");
+        sidebar.css("display", "block");
+        sidebar.animate({width: "20rem"}, ".1s");
+
         $("#close").css("display", "flex");
         $("#close").css("visibility", "visible");
     })
     //Close
     $("#close").click(function () {
-        $(".sidebar").css("width", "0").css("display", "none");
-        $("#close").css("visibility", "hidden");
+        let sidebar = $(".sidebar");
+        sidebar.animate({width: "0"}, ".1s");
+
+        setTimeout(() => {
+            sidebar.css("display", "none");
+            $("#close").css("display", "none");
+            $("#close").css("visibility", "hidden");
+        }, 400)
     })
 });
