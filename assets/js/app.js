@@ -38,4 +38,11 @@ $(document).ready(function () {
             $("#close").css("visibility", "hidden");
         }, 400)
     })
+
+    //Img No Click
+    $("img").click(function(e) {
+        if (e.button === 2) {
+            return false;
+        }
+    })
 });

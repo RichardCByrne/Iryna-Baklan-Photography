@@ -1,10 +1,12 @@
 /* ------------------------------------------- Fonts */
+
 @font-face {
     font-family: "Harabara";
-    src:  url("/assets/fonts/Harabara\ Mais\ Demo.otf");
+    src: url("/assets/fonts/Harabara\ Mais\ Demo.otf");
 }
 
 /* ------------------------------------------- General */
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
@@ -34,15 +36,34 @@ h1 {
     z-index: 2;
 }
 
-.desktop-nav {
-    position: fixed;
-    left: 0;
-}
-
 a {
     font-size: 1.8rem;
     color: #afabab;
     padding: .1rem 2rem;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #dad4d4;
+    text-decoration: none;
+}
+
+img {
+    padding: 2rem;
+    vertical-align: middle;
+    width: 100%;
+    opacity: 1;
+    transition: .3s;
+}
+
+img:hover {
+    opacity: .75;
+    transition: .3s;
+}
+
+.desktop-nav {
+    position: fixed;
+    left: 0;
 }
 
 div.col, div.row {
@@ -55,6 +76,7 @@ div.col, div.row {
 }
 
 /* ------------------------------------------- Nav */
+
 #burger {
     font-size: 2.5rem;
     margin-right: 1.6rem;
@@ -118,13 +140,7 @@ div.col, div.row {
 .images-col {
     flex: 50%;
     max-width: 50%;
-    padding: 0 .4rem;
-}
-
-img {
-    padding: 1rem;
-    vertical-align: middle;
-    width: 100%;
+    padding: 0 0rem;
 }
 
 .desktop-nav {
@@ -135,9 +151,13 @@ img {
 
 footer {
     justify-content: center;
+    flex: 100%;
+    width: 100%;
     display: flex;
-    margin: 0 2.75rem;
+    margin: 0 auto;
     position: relative;
+    transform: translateY(4rem);
+    clear: both;
     z-index: 2;
 }
 
@@ -168,6 +188,40 @@ i {
 /* ------------------------------------------- >= 992px */
 
 @media screen and (min-width: 992px) {
+    /* General */
+    main {
+        top: 16vh;
+    }
+    
+    h1 {
+        font-size: 6rem;
+        margin: 3rem 3rem 4rem 2.3rem;
+    }
+    
+    /* Images */
+    img {
+        padding: 4rem;
+    }
+
+    .main-col-images {
+        flex: 33%;
+    }
+    .images-col {
+        flex: 33%;
+        max-width: 33%;
+    }
+}
+
+/* ------------------------------------------- >= 1200px */
+
+@media screen and (min-width: 1200px) {
+    /* General */
+    h1 {
+        font-size: 6.5rem;
+    }
+    main {
+        margin: 0 3rem;
+    }
     /* Nav */
     .desktop-nav {
         display: flex;
@@ -176,14 +230,14 @@ i {
         margin: 0;
         text-align: left;
         color: #afabab;
-        position: absolute;
+        position: fixed;
         top: 21.2vh;
+        z-index: 1;
     }
-
     #logo {
         position: fixed;
+        margin: 4rem 4rem;
     }
-
     #burger {
         display: none;
     }
@@ -194,7 +248,6 @@ i {
 
     #projects-sub {
         visibility: hidden;
-
     }
 
     li {
@@ -203,31 +256,31 @@ i {
         font-size: 2rem;
     }
 
-    /* Images */
+    #projects-sub li {
+        padding: .23rem 2rem .23rem 0;
+        text-align: left;
+    }
 
+    #projects-sub li a {
+        font-size: 1.6rem;
+        font-weight: 200;
+        padding: .1rem 0;
+        white-space: nowrap;
+    }
+
+
+    /* Images */
     .main-col-images {
-        flex: 75%;
+        flex: 25%;
+    }
+
+    .nav-col {
+        flex: 20%;
+        max-width: 20%;
     }
 
     .images-col {
-        flex: 33%;
-        max-width: 33%;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    /* General */
-    h1 {
-        font-size: 6.5rem;
-    }
-
-    main {
-        margin: 0 3rem;
-    }
-
-    /* Nav */
-
-    #logo {
-        margin: 4rem 4rem;
+        flex: 25%;
+        max-width: 25%;
     }
 }
