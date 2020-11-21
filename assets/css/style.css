@@ -44,7 +44,7 @@ a {
 }
 
 a:hover {
-    color: #dad4d4;
+    color: #fce711;
     text-decoration: none;
 }
 
@@ -195,12 +195,12 @@ i {
     
     h1 {
         font-size: 6rem;
-        margin: 3rem 3rem 4rem 2.3rem;
+        margin: 3rem 3rem 4rem .2rem;
     }
     
     /* Images */
     img {
-        padding: 4rem;
+        padding: 6rem;
     }
 
     .main-col-images {
@@ -209,6 +209,10 @@ i {
     .images-col {
         flex: 33%;
         max-width: 33%;
+    }
+
+    .portrait {
+        padding: 6rem 11rem;
     }
 }
 
