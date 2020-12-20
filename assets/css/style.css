@@ -114,6 +114,10 @@ div.col, div.row {
     padding: .5rem;
 }
 
+.active {
+    color: #fce711;
+}
+
 #close {
     font-size: 3rem;
     display: none;
@@ -129,6 +133,14 @@ div.col, div.row {
     display: flex;
     width: 100%;
     padding: 0 .4rem 8rem .4rem;
+}
+
+.section-heading {
+    position: relative;
+    left: 0%;
+    top: -1%;
+    font-size: 1.8rem;
+    color: #afabab;
 }
 
 .main-col-images {
