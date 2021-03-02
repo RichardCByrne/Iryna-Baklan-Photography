@@ -132,7 +132,7 @@ div.col, div.row {
     width: 100%;
     display: flex;
     width: 100%;
-    padding: 0 .4rem 8rem .4rem;
+    margin: 0 .4rem 8rem .4rem;
 }
 
 .mobile-title {
@@ -186,10 +186,23 @@ footer {
     padding: 0;
 }
 
-hr {
+.below-nav-col {
+    flex: 20%;
+    max-width: 20%;
+}
+
+.bottom-line-col {
+    flex: 75%;
+    max-width: 75%;
+    margin-left: 21.15%;
+}
+
+hr#bottom-line {
     color: #fce711;
     border-top: #fce711 1px solid;
-    width: 100%;
+    width: 75%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 
 .instagram, .email {
@@ -257,6 +270,7 @@ i {
     main {
         margin: 0 3rem;
     }
+
     /* Nav */
     .desktop-nav {
         display: flex;
@@ -303,19 +317,39 @@ i {
         white-space: nowrap;
     }
 
+    .nav-col {
+        flex: 20%;
+        max-width: 20%;
+    }
+
 
     /* Images */
     .main-col-images {
         flex: 25%;
     }
 
-    .nav-col {
-        flex: 20%;
-        max-width: 20%;
-    }
-
     .images-col {
         flex: 25%;
         max-width: 25%;
+    }
+
+
+    /* Info */
+    .main-col-info {
+        display: flex;
+        flex: 100%;
+        flex-wrap: wrap;
+    }
+
+    .info-col {
+        max-width: 50%;
+        flex: 75%;
+        flex-wrap: wrap;
+        text-align: left;
+    }
+
+    .info-col > p {
+        font-size: 17px;
+        color: #afabab;
     }
 }
