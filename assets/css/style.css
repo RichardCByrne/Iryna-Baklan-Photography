@@ -135,10 +135,16 @@ div.col, div.row {
     padding: 0 .4rem 8rem .4rem;
 }
 
-.section-heading {
+.mobile-title {
+    display: block;
     position: relative;
-    left: 0%;
-    top: -1%;
+}
+
+.desktop-title {
+    display: none;
+}
+
+.section-heading {
     font-size: 1.8rem;
     color: #afabab;
 }
@@ -218,6 +224,19 @@ i {
     .main-col-images {
         flex: 33%;
     }
+
+    .mobile-title {
+        display: none;
+    }
+
+    .desktop-title {
+        display: block;
+        position: relative;
+        left: 0%;
+        top: -1%;
+        margin: 0;
+    }
+
     .images-col {
         flex: 33%;
         max-width: 33%;
