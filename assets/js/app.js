@@ -1,5 +1,6 @@
 $(document).ready(function () {
     //Desktop Navigation Sub Menu Visibility
+    
     $("#projects").mouseover(function() {
         $("#projects-sub").css("visibility", "visible");
     });
@@ -15,7 +16,11 @@ $(document).ready(function () {
         $("#projects-sub > li").mouseleave(function () {
             $("#projects-sub").css("visibility", "hidden");
         });
-    };
+    } else {
+        $("#projects-sub").css("visibility", "hidden");
+    }
+
+    $("#projects-sub").css("visibility", "hidden");
 
     //Mobile Burger Icon
     //Show
