@@ -244,15 +244,18 @@ i {
 
     .desktop-title {
         display: block;
-        position: relative;
-        left: 0%;
+        position: absolute;
+        left: 50%;
         top: -1%;
         margin: 0;
+        transform: translateX(-50%);
+        width: 100%;
     }
 
     .images-col {
         flex: 33%;
         max-width: 33%;
+        position: relative;
     }
 
     .portrait {
