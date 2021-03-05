@@ -75,6 +75,65 @@ div.col, div.row {
     visibility: visible;
 }
 
+/* Modal */
+
+.modal {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadein .4s ;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    margin: auto;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+}
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    color: #fce711;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.fa-times {
+    color: #fce711;
+    /* z-index: 6; */
+}
+
+img.modal-content:hover {
+    opacity: 1;
+}
+
 /* ------------------------------------------- Nav */
 
 #burger {
@@ -116,13 +175,6 @@ div.col, div.row {
 
 .active {
     color: #fce711;
-}
-
-#close {
-    font-size: 3rem;
-    display: none;
-    justify-content: flex-end;
-    margin-right: 2rem;
 }
 
 /* ------------------------------------------- Images */
@@ -223,25 +275,20 @@ i {
     main {
         top: 16vh;
     }
-    
     h1 {
         font-size: 6rem;
         margin: 3rem 3rem 4rem .2rem;
     }
-    
     /* Images */
     img {
         padding: 6rem;
     }
-
     .main-col-images {
         flex: 33%;
     }
-
     .mobile-title {
         display: none;
     }
-
     .desktop-title {
         display: block;
         position: absolute;
@@ -251,13 +298,11 @@ i {
         transform: translateX(-50%);
         width: 100%;
     }
-
     .images-col {
         flex: 33%;
         max-width: 33%;
         position: relative;
     }
-
     .portrait {
         padding: 6rem 11rem;
     }
@@ -273,7 +318,6 @@ i {
     main {
         margin: 0 3rem;
     }
-
     /* Nav */
     .desktop-nav {
         display: flex;
@@ -293,57 +337,45 @@ i {
     #burger {
         display: none;
     }
-
     #projects {
         margin: 0;
     }
-
     #projects-sub {
         visibility: hidden;
     }
-
     li {
         list-style-type: none;
         padding: .23rem 2rem .23rem 5.5rem;
         font-size: 2rem;
     }
-
     #projects-sub li {
         padding: .23rem 2rem .23rem 0;
         text-align: left;
     }
-
     #projects-sub li a {
         font-size: 1.6rem;
         font-weight: 200;
         padding: .1rem 0;
         white-space: nowrap;
     }
-
     .nav-col {
         flex: 20%;
         max-width: 20%;
     }
-
-
     /* Images */
     .main-col-images {
         flex: 25%;
     }
-
     .images-col {
         flex: 25%;
         max-width: 25%;
     }
-
-
     /* Info */
     .main-col-info {
         display: flex;
         flex: 100%;
         flex-wrap: wrap;
     }
-
     .info-col {
         padding-top: 4.4vh;
         max-width: 55%;
@@ -351,38 +383,31 @@ i {
         flex-wrap: wrap;
         text-align: left;
     }
-
-    .info-col > p, .info-col > p > strong {
+    .info-col>p, .info-col>p>strong {
         font-size: 17px;
         color: #afabab;
     }
-
     #info-table {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
     }
-
     tr, th, td {
         font-size: 17px;
         color: #afabab;
         font-weight: 400;
         vertical-align: top;
     }
-
     th {
         width: 13%;
     }
-
-    td >a {
+    td>a {
         padding: 0;
         color: #fce711;
     }
-
     .info-year {
         width: 13%;
     }
-    
     hr#info-line {
         color: #fce711;
         border-top: #fce711 1px solid;
@@ -390,8 +415,11 @@ i {
         margin-top: 5rem;
         margin-bottom: 3rem;
     }
-
     hr#info-bottom-line {
         visibility: hidden;
+    }
+    /* Modal */
+    img.modal-content {
+        padding: 8rem 0;
     }
 }

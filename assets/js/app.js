@@ -44,10 +44,28 @@ $(document).ready(function () {
         }, 400)
     })
 
-    //Img No Click
-    $("img").click(function(e) {
+    //Image No Click
+    $("html").click(function(e) {
         if (e.button === 2) {
             return false;
         }
     })
+
+    // Image Modal
+    // Get clicked on image's source
+    $(document).click(function(e) {
+        let element = e.target;
+        if (element.nodeName === "IMG") {
+            let src = element.getAttribute("src");
+            let modal = $(".modal");
+            let modalImage = $(".modal-content");
+            modal.css("display", "block");
+            $(".modal-content").attr("src", src);
+            let close = $(".close")[0];
+            close.onclick = function() {
+                // modal.addClass("fadeout-animation");
+                modal.css("display", "none");
+            }
+        }
+    });
 });
