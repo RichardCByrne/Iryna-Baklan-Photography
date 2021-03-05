@@ -114,10 +114,10 @@ div.col, div.row {
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 35px;
+    top: 1.5rem;
+    right: 3.5rem;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 4rem;
     font-weight: bold;
     transition: 0.3s;
     color: #fce711;
@@ -251,7 +251,7 @@ footer {
 
 hr#bottom-line {
     color: #fce711;
-    border-top: #fce711 1px solid;
+    border-top: #fce711 .1rem solid;
     width: 93%;
     margin-top: 5rem;
     margin-bottom: 3rem;
@@ -385,7 +385,7 @@ i {
         text-align: left;
     }
     .info-col>p, .info-col>p>strong {
-        font-size: 17px;
+        font-size: 1.7rem;
         color: #afabab;
     }
     #info-table {
@@ -394,7 +394,7 @@ i {
         text-align: left;
     }
     tr, th, td {
-        font-size: 17px;
+        font-size: 1.7rem;
         color: #afabab;
         font-weight: 400;
         vertical-align: top;
@@ -411,7 +411,7 @@ i {
     }
     hr#info-line {
         color: #fce711;
-        border-top: #fce711 1px solid;
+        border-top: #fce711 .1rem solid;
         width: 100%;
         margin-top: 5rem;
         margin-bottom: 3rem;
@@ -422,5 +422,21 @@ i {
     /* Modal */
     img.modal-content {
         padding: 8rem 0;
+    }
+}
+
+/* ------------------------------------------- >= 2000px */
+
+@media screen and (min-width: 2000px) {
+    * {
+        font-size: 11px;
+    }
+}
+
+/* ------------------------------------------- >= 3500px */
+
+@media screen and (min-width: 3500px) {
+    * {
+        font-size: 20px;
     }
 }
