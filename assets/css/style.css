@@ -108,7 +108,7 @@ div.col, div.row {
     border: none;
 }
 
-/* The Close Button */
+/* The Modal Close Button */
 
 .close {
     position: absolute;
@@ -171,10 +171,24 @@ img.modal-content:hover {
     padding: .5rem;
 }
 
+#projects-sidebar {
+    margin-top: 2.5rem;
+}
+
 .dropdown-content a {
     font-size: 1.5rem;
     color: #afabab;
     padding-top: 1rem;
+}
+
+#close {
+    padding: 0;
+}
+
+#close i {
+    position: absolute;
+    right: 7vw;
+    height: 0;
 }
 
 .active {
