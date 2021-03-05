@@ -61,11 +61,6 @@ img:hover {
     transition: .3s;
 }
 
-.desktop-nav {
-    position: fixed;
-    left: 0;
-}
-
 div.col, div.row {
     max-width: 100%;
     padding: 0;
@@ -91,14 +86,13 @@ div.col, div.row {
     top: 0;
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
-    animation: fadein .4s ;
+    animation: fadein .4s;
 }
 
 @keyframes fadein {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -250,15 +244,15 @@ footer {
 .bottom-line-col {
     flex: 75%;
     max-width: 75%;
-    margin-left: 21.15%;
+    margin: 0 auto;
 }
 
 hr#bottom-line {
     color: #fce711;
     border-top: #fce711 .1rem solid;
-    width: 93%;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
 }
 
 .instagram, .email {
@@ -283,6 +277,16 @@ i {
     h1 {
         font-size: 6rem;
         margin: 3rem 3rem 4rem .2rem;
+    }
+    .bottom-line-col {
+        margin: 0 auto;
+    }
+    hr#bottom-line {
+        color: #fce711;
+        border-top: #fce711 .1rem solid;
+        width: 100%;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
     }
     /* Images */
     img {
@@ -323,6 +327,18 @@ i {
     main {
         margin: 0 3rem;
     }
+    .bottom-line-col {
+        flex: 75%;
+        max-width: 75%;
+        margin-left: 21.15%;
+    }
+    hr#bottom-line {
+        color: #fce711;
+        border-top: #fce711 .1rem solid;
+        width: 93%;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+    }
     /* Nav */
     .desktop-nav {
         display: flex;
@@ -333,6 +349,7 @@ i {
         color: #afabab;
         position: fixed;
         top: 21.2vh;
+        left: 0;
         z-index: 1;
     }
     #logo {
