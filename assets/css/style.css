@@ -269,6 +269,10 @@ hr#bottom-line {
     border: none;
 }
 
+.instagram a, .email a {
+    padding: 0;
+}
+
 i {
     font-size: 2.5rem;
 }
