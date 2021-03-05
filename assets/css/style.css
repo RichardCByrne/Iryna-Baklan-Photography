@@ -75,6 +75,10 @@ div.col, div.row {
     visibility: visible;
 }
 
+.text-nowrap {
+    white-space: nowrap;
+}
+
 /* Modal */
 
 .modal {
@@ -418,6 +422,7 @@ i {
     }
     hr#info-bottom-line {
         visibility: hidden;
+        margin-bottom: 2.5rem;
     }
     /* Modal */
     img.modal-content {
@@ -429,7 +434,7 @@ i {
 
 @media screen and (min-width: 2000px) {
     * {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 

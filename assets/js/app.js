@@ -26,12 +26,14 @@ $(document).ready(function () {
     //Show
     $("#burger").click(function () {
         let sidebar = $(".sidebar");
+        
         sidebar.css("display", "block");
-        sidebar.animate({width: "20rem"}, ".1s");
+        sidebar.animate({width: "22rem"}, ".1s");
 
         $("#close").css("display", "flex");
         $("#close").css("visibility", "visible");
     })
+
     //Close
     $("#close").click(function () {
         let sidebar = $(".sidebar");
