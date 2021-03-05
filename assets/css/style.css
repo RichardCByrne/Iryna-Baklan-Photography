@@ -221,6 +221,69 @@ img.modal-content:hover {
     display: none;
 }
 
+/* Info */
+.main-col-info {
+    display: flex;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+.info-col {
+    padding-top: 1vh;
+    max-width: 90%;
+    flex: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 0 auto;
+}
+.info-col>p, .info-col>p>strong {
+    font-size: 1.7rem;
+    color: #afabab;
+}
+
+#info-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.info-title {
+    color: #afabab;
+    font-size: 2.5rem;
+    margin-bottom: 1.3rem;
+}
+
+tr, th, td {
+    font-size: 1.7rem;
+    color: #afabab;
+    font-weight: 400;
+    vertical-align: top;
+}
+
+th {
+    width: 100%;
+}
+
+td>a {
+    padding: 0;
+    color: #fce711;
+}
+
+.info-year {
+    width: 15%;
+}
+
+hr#info-line {
+    color: #fce711;
+    border-top: #fce711 .1rem solid;
+    width: 100%;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+hr#info-bottom-line {
+    visibility: hidden;
+    margin-bottom: 0;
+}
+
 /* ------------------------------------------- Footer */
 
 footer {
