@@ -262,6 +262,7 @@ hr#bottom-line {
     height: 5rem;
     color: #afabab;
     padding: 1rem 1rem;
+    border: none;
 }
 
 i {
