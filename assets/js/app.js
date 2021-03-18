@@ -56,7 +56,8 @@ $(document).ready(function () {
     // Image Modal
     // Get clicked on image's source
     $(document).click(function(e) {
-        if (window.location.href.endsWith("index.html") || window.location.href.endsWith(".com") || window.location.href.endsWith("")|| window.location.href.endsWith("/")) {
+        console.log(window.location.pathname)
+        if (window.location.href.endsWith("index.html") || window.location.pathname.endsWith("/")) {
             // pass
         } else {
             let element = e.target;
@@ -68,7 +69,6 @@ $(document).ready(function () {
                 $(".modal-content").attr("src", src);
                 let close = $(".close")[0];
                 close.onclick = function() {
-                    // modal.addClass("fadeout-animation");
                     modal.css("display", "none");
                 }
             }
