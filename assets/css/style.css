@@ -431,6 +431,13 @@ i {
         max-width: 75%;
         margin-left: 21.15%;
     }
+    .social-icons {
+        flex: 75%;
+        max-width: 75%;
+        margin-left: 21.15%;
+        margin-right: 6.5%;
+        margin-bottom: 1.5rem;
+    }
     hr#bottom-line {
         color: #fce711;
         border-top: #fce711 .1rem solid;
