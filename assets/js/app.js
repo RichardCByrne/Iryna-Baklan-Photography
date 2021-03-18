@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //Desktop Navigation Sub Menu Visibility
+    // Desktop Navigation Sub Menu Visibility
     
     $("#projects").mouseover(function() {
         $("#projects-sub").css("visibility", "visible");
@@ -22,19 +22,19 @@ $(document).ready(function () {
 
     $("#projects-sub").css("visibility", "hidden");
 
-    //Mobile Burger Icon
-    //Show
+    // Mobile Burger Icon
+    // Show
     $("#burger").click(function () {
         let sidebar = $(".sidebar");
         
         sidebar.css("display", "block");
-        sidebar.animate({width: "22rem"}, ".1s");
+        sidebar.animate({width: "29rem"}, ".1s");
 
         $("#close").css("display", "flex");
         $("#close").css("visibility", "visible");
     })
 
-    //Close
+    // Close
     $("#close").click(function () {
         let sidebar = $(".sidebar");
         sidebar.animate({width: "0"}, ".1s");
@@ -46,7 +46,7 @@ $(document).ready(function () {
         }, 400)
     })
 
-    //Image No Click
+    // Image No Right Click
     $("html").click(function(e) {
         if (e.button === 2) {
             return false;

@@ -169,17 +169,24 @@ img.modal-content:hover {
 }
 
 .sidebar ul li {
-    padding: .5rem;
+    padding: .9rem;
 }
 
 #projects-sidebar {
     margin-top: 2.5rem;
 }
 
+.sidebar ul li > a {
+    margin: 4.5rem;
+    font-size: 2.6rem;
+}
+
 .dropdown-content a {
-    font-size: 1.5rem;
+    display: inline-block;
+    font-size: 1.9rem;
     color: #afabab;
-    padding-top: 1rem;
+    padding: .3rem 2rem .3rem 2rem;
+    margin: .4rem 0;
 }
 
 #close {
