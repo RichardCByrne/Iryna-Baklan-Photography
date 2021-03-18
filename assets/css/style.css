@@ -239,6 +239,10 @@ img.modal-content:hover {
     padding: 0 0rem;
 }
 
+.images-col a {
+    padding: 0;
+}
+
 .desktop-nav {
     display: none;
 }

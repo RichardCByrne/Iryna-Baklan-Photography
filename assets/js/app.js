@@ -56,17 +56,21 @@ $(document).ready(function () {
     // Image Modal
     // Get clicked on image's source
     $(document).click(function(e) {
-        let element = e.target;
-        if (element.nodeName === "IMG") {
-            let src = element.getAttribute("src");
-            let modal = $(".modal");
-            let modalImage = $(".modal-content");
-            modal.css("display", "block");
-            $(".modal-content").attr("src", src);
-            let close = $(".close")[0];
-            close.onclick = function() {
-                // modal.addClass("fadeout-animation");
-                modal.css("display", "none");
+        if (window.location.href.endsWith("index.html") || window.location.href.endsWith(".com") || window.location.href.endsWith("")|| window.location.href.endsWith("/")) {
+            // pass
+        } else {
+            let element = e.target;
+            if (element.nodeName === "IMG") {
+                let src = element.getAttribute("src");
+                let modal = $(".modal");
+                let modalImage = $(".modal-content");
+                modal.css("display", "block");
+                $(".modal-content").attr("src", src);
+                let close = $(".close")[0];
+                close.onclick = function() {
+                    // modal.addClass("fadeout-animation");
+                    modal.css("display", "none");
+                }
             }
         }
     });
