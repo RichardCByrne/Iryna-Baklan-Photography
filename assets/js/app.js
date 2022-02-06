@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         $("#close").css("display", "flex");
         $("#close").css("visibility", "visible");
-    })
+    });
 
     // Close
     $("#close").click(function () {
@@ -43,20 +43,20 @@ $(document).ready(function () {
             sidebar.css("display", "none");
             $("#close").css("display", "none");
             $("#close").css("visibility", "hidden");
-        }, 400)
-    })
+        }, 400);
+    });
 
     // Image No Right Click
     $("html").click(function(e) {
         if (e.button === 2) {
             return false;
         }
-    })
+    });
 
     // Image Modal
     // Get clicked on image's source
     $(document).click(function(e) {
-        console.log(window.location.pathname)
+        console.log(window.location.pathname);
         if (window.location.href.endsWith("index.html") || window.location.pathname.endsWith("/")) {
             // pass
         } else {
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 let close = $(".close")[0];
                 close.onclick = function() {
                     modal.css("display", "none");
-                }
+                };
             }
         }
     });
