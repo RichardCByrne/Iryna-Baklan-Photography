@@ -54,20 +54,19 @@ $(document).ready(function () {
     });
 
     // Image Modal
-    // Get clicked on image's source
+    // Get clicked-on image's source
     $(document).click(function(e) {
-        console.log(window.location.pathname);
-        if (window.location.href.endsWith("index.html") || window.location.pathname.endsWith("/")) {
-            // pass
-        } else {
-            let element = e.target;
+        const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
+        if (isNotHomepage) {
+            const element = e.target;
             if (element.nodeName === "IMG") {
-                let src = element.getAttribute("src");
-                let modal = $(".modal");
-                let modalImage = $(".modal-content");
+                const src = element.getAttribute("src");
+                const modal = $(".modal");
+                const close = $(".close")[0];
+                
                 modal.css("display", "block");
                 $(".modal-content").attr("src", src);
-                let close = $(".close")[0];
+
                 close.onclick = function() {
                     modal.css("display", "none");
                 };
