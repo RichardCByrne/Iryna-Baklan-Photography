@@ -47,6 +47,7 @@ a {
 a:hover {
     color: #fce711;
     text-decoration: none;
+    cursor: pointer;
 }
 
 img {
@@ -60,6 +61,10 @@ img {
 img:hover {
     opacity: .75;
     transition: .3s;
+}
+
+img:not(.modal-content) {
+    cursor: pointer;
 }
 
 div.col, div.row {
@@ -115,7 +120,6 @@ div.col, div.row {
     position: absolute;
     top: 1.5rem;
     right: 3.5rem;
-    color: #f1f1f1;
     font-size: 4rem;
     font-weight: bold;
     transition: 0.3s;
@@ -145,7 +149,7 @@ img.modal-content:hover {
 }
 
 #logo {
-    margin: 2rem 1.5rem 2rem 0rem;
+    margin: 2rem 1.5rem 2rem 0;
     position: absolute;
     top: 0;
     z-index: 1;
@@ -208,8 +212,6 @@ img.modal-content:hover {
 .main-container {
     display: flex;
     width: 100%;
-    display: flex;
-    width: 100%;
     margin: 0 .4rem 8rem .4rem;
 }
 
@@ -236,7 +238,7 @@ img.modal-content:hover {
 .images-col {
     flex: 50%;
     max-width: 50%;
-    padding: 0 0rem;
+    padding: 0;
 }
 
 .images-col a {
