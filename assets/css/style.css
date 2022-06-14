@@ -63,10 +63,6 @@ img:hover {
     transition: .3s;
 }
 
-img:not(.modal-content) {
-    cursor: pointer;
-}
-
 div.col, div.row {
     max-width: 100%;
     padding: 0;
@@ -93,6 +89,7 @@ div.col, div.row {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.9);
     animation: fadein .4s;
+    transition: all .4s;
 }
 
 @keyframes fadein {
@@ -104,7 +101,16 @@ div.col, div.row {
     }
 }
 
-.modal-content {
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+/* .modal-content {
     margin: auto;
     padding: 0;
     display: block;
@@ -112,6 +118,38 @@ div.col, div.row {
     height: 100%;
     object-fit: contain;
     border: none;
+} */
+
+.carousel-cell {
+    width: 100%;
+    height: 100vh;
+    margin-right: 10px;
+    /* center images in cells with flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+.carousel-cell-image {
+    display: flex;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel-cell-image:hover {
+    opacity: 1;
+    cursor: auto;
+}
+
+.flickity-button {
+    background: transparent;
+}
+
+.flickity-button:hover {
+    background: transparent;
 }
 
 /* The Modal Close Button */

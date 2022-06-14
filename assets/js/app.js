@@ -47,30 +47,44 @@ $(document).ready(function () {
     });
 
     // Image No Right Click
-    $("html").click(function(e) {
+    $(document).click(function(e) {
         if (e.button === 2) {
+            e.preventDefault();
             return false;
         }
     });
 
     // Image Modal
-    // Get clicked-on image's source
     $(document).click(function(e) {
         const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
         if (isNotHomepage) {
+            const modal = $(".modal");
             const element = e.target;
+            
             if (element.nodeName === "IMG") {
-                const src = element.getAttribute("src");
-                const modal = $(".modal");
-                const close = $(".close")[0];
-                
+                modal.css("animation", "fadein");
                 modal.css("display", "block");
-                $(".modal-content").attr("src", src);
-
-                close.onclick = function() {
-                    modal.css("display", "none");
-                };
+                let carousel = new Flickity(".main-carousel", {
+                    // options
+                    cellAlign: 'left',
+                    imagesLoaded: true,
+                    contain: true,
+                    wrapAround: false,
+                    hash: true,
+                    fade: true,
+                    lazyLoad: 2,
+                    percentPosition: false,
+                    pageDots: false,
+                    autoPlay: false,
+                    fullscreen: true,
+                  });
             }
+
+            const close = $(".close")[0];
+            close.onclick = function() {
+                modal.css("animation", "fadeout");
+                modal.css("display", "none");
+            };
         }
     });
 });
