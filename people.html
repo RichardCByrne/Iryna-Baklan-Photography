@@ -50,6 +50,9 @@
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/xfc7xpf.css">
     <!-- ./Adobe Fonts -->
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- ./Swiper -->
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <!-- ./CSS -->
@@ -108,30 +111,95 @@
             <div class="main-col-images">
                 <div class="nav-col d-none d-xl-block"></div>
                 <div class="images-col">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(2).webp" class="portrait" loading="lazy" alt="Large format portrait of young woman with pineapples on head">
-                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(3).webp" class="portrait" loading="lazy" alt="Creative portrait with heart flowers on a young woman's face">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(5).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man with popcorn as moustache">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(3).webp" class="portrait" loading="lazy" alt="Large format portrait of young woman with cabbage leaves as head gear and shoulder pads">
+                    <a href="#image-1">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(2).webp" class="portrait" loading="lazy" alt="Large format portrait of young woman with pineapples on head">
+                    </a>
+                    <a href="#image-4">
+                        <img src="assets/images/Creative_Portraits_Iryna_Baklan_(3).webp" class="portrait" loading="lazy" alt="Creative portrait with heart flowers on a young woman's face">
+                    </a>
+                    <a href="#image-7">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(5).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man with popcorn as moustache">
+                    </a>
+                    <a href="#image-10">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(3).webp" class="portrait" loading="lazy" alt="Large format portrait of young woman with cabbage leaves as head gear and shoulder pads">
+                    </a>
                 </div>
                 <div class="images-col">
                     <h2 class="text-center desktop-title section-heading">People</h2>
-                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(2).webp" class="first-middle-col-img portrait" loading="lazy" alt="Artistic portrait of a woman with purple hydrangea flowers in mouth">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(1).webp" class="portrait" loading="lazy" alt="Large format portrait of young bald woman with head wrapped in clingfilm and steamed up glasses">
-                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(1).webp" class="portrait" loading="lazy" alt="Close up portrait of young woman with orange dragon scale flower petals on eyebrows and nails">
-                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(5).webp" class="portrait" loading="lazy" alt="Single-use plastic bag awareness portrait of young woman">
+                    <a href="#image-2">
+                        <img src="assets/images/Creative_Portraits_Iryna_Baklan_(2).webp" class="first-middle-col-img portrait" loading="lazy" alt="Artistic portrait of a woman with purple hydrangea flowers in mouth">
+                    </a>
+                    <a href="#image-5">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(1).webp" class="portrait" loading="lazy" alt="Large format portrait of young bald woman with head wrapped in clingfilm and steamed up glasses">
+                    </a>
+                    <a href="#image-8">
+                        <img src="assets/images/Creative_Portraits_Iryna_Baklan_(1).webp" class="portrait" loading="lazy" alt="Close up portrait of young woman with orange dragon scale flower petals on eyebrows and nails">
+                    </a>
+                    <a href="#image-11">
+                        <img src="assets/images/Creative_Portraits_Iryna_Baklan_(5).webp" class="portrait" loading="lazy" alt="Single-use plastic bag awareness portrait of young woman">
+                    </a>
                 </div>
                 <div class="images-col d-none d-lg-block">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(6).webp" class="portrait" loading="lazy" alt="Large format nude portrait of a young woman with asparagus necklace">
-                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(4).webp" class="portrait" loading="lazy" alt="Single-use plastic bags as headpiece on a young woman">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(8).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man with pak choi as face shield">
-                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(7).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man wearing bananas on head">
+                    <a href="#image-3">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(6).webp" class="portrait" loading="lazy" alt="Large format nude portrait of a young woman with asparagus necklace">
+                    </a>
+                    <a href="#image-6">
+                        <img src="assets/images/Creative_Portraits_Iryna_Baklan_(4).webp" class="portrait" loading="lazy" alt="Single-use plastic bags as headpiece on a young woman">
+                    </a>
+                    <a href="#image-9">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(8).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man with pak choi as face shield">
+                    </a>
+                    <a href="#image-12">
+                        <img src="assets/images/Food_Portraits_Iryna_Baklan_(7).webp" class="portrait" loading="lazy" alt="Large format black and white portrait of young man wearing bananas on head">
+                    </a>
                 </div>
             </div>
         </div>
     </main>
     <div class="modal" id="image-modal" aria-hidden="true">
         <span class="close"><i class="fas fa-times"></i></span>
-        <img class="modal-content" src="" id="image-within-modal">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-hash="image-1">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(2).webp" loading="lazy" alt="Large format portrait of young woman with pineapples on head" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-2">
+                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(2).webp" loading="lazy" alt="Artistic portrait of a woman with purple hydrangea flowers in mouth" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-3">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(6).webp" loading="lazy" alt="Large format nude portrait of a young woman with asparagus necklace" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-4">
+                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(3).webp" loading="lazy" alt="Creative portrait with heart flowers on a young woman's face" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-5">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(1).webp" loading="lazy" alt="Large format portrait of young bald woman with head wrapped in clingfilm and steamed up glasses" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-6">
+                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(4).webp" loading="lazy" alt="Single-use plastic bags as headpiece on a young woman" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-7">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(5).webp" loading="lazy" alt="Large format black and white portrait of young man with popcorn as moustache" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-8">
+                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(1).webp" loading="lazy" alt="Close up portrait of young woman with orange dragon scale flower petals on eyebrows and nails" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-9">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(8).webp" loading="lazy" alt="Large format black and white portrait of young man with pak choi as face shield" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-10">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(3).webp" loading="lazy" alt="Large format portrait of young woman with cabbage leaves as head gear and shoulder pads" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-11">
+                    <img src="assets/images/Creative_Portraits_Iryna_Baklan_(5).webp" loading="lazy" alt="Single-use plastic bag awareness portrait of young woman" class="swiper-image">
+                </div>
+                <div class="swiper-slide" data-hash="image-12">
+                    <img src="assets/images/Food_Portraits_Iryna_Baklan_(7).webp" loading="lazy" alt="Large format black and white portrait of young man wearing bananas on head" class="swiper-image">
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
     <footer>
         <div class="row w-100">
@@ -165,10 +233,12 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e2f6d2d599.js" crossorigin="anonymous"></script>
     <!-- ./Font Awesome -->
-    <!-- Flickity -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <!-- ./Flickity -->loading="lazy" 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ./Swiper JS -->
+    <!-- Custom JS -->
     <script type="text/javascript" src="assets/js/app.js"></script>
+    <!-- ./Custom JS -->
 </body>
 
 </html>

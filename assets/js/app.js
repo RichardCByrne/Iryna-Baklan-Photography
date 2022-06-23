@@ -55,32 +55,39 @@ $(document).ready(function () {
     });
 
     // Image Modal
+    // Initialise Swiper
+    const swiper = new Swiper(".swiper", {
+        // effect: "fade",
+        slidesPerView: 1,
+        centeredSlides: true,
+        grabCursor: true,
+        hashNavigation: {
+            watchState: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+
+    // Get clicked-on image's source
     $(document).click(function(e) {
         const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
         if (isNotHomepage) {
             const modal = $(".modal");
             const element = e.target;
+            const close = $(".close")[0];
             
             if (element.nodeName === "IMG") {
-                modal.css("animation", "fadein");
+                const modal = $(".modal");
+                
                 modal.css("display", "block");
-                let carousel = new Flickity(".main-carousel", {
-                    // options
-                    cellAlign: 'left',
-                    imagesLoaded: true,
-                    contain: true,
-                    wrapAround: false,
-                    hash: true,
-                    fade: true,
-                    lazyLoad: 2,
-                    percentPosition: false,
-                    pageDots: false,
-                    autoPlay: false,
-                    fullscreen: true,
-                  });
+
+                close.onclick = function() {
+                    modal.css("display", "none");
+                };
             }
 
-            const close = $(".close")[0];
             close.onclick = function() {
                 modal.css("animation", "fadeout");
                 modal.css("display", "none");
