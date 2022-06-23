@@ -54,18 +54,31 @@ $(document).ready(function () {
     });
 
     // Image Modal
+    // Initialise Swiper
+    const swiper = new Swiper(".swiper", {
+        // effect: "fade",
+        slidesPerView: 1,
+        centeredSlides: true,
+        grabCursor: true,
+        hashNavigation: {
+            watchState: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        }
+    });
+
     // Get clicked-on image's source
     $(document).click(function(e) {
         const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
         if (isNotHomepage) {
             const element = e.target;
             if (element.nodeName === "IMG") {
-                const src = element.getAttribute("src");
                 const modal = $(".modal");
                 const close = $(".close")[0];
                 
                 modal.css("display", "block");
-                $(".modal-content").attr("src", src);
 
                 close.onclick = function() {
                     modal.css("display", "none");
