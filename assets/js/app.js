@@ -85,7 +85,8 @@ $(document).ready(function () {
             if (element.nodeName === "IMG") {      
                 requestAnimationFrame(() => {
                     modal.css("display", "block");
-                });          
+                    modal.attr("aria-hidden", "false");
+                });
             }
         }
     });
@@ -95,6 +96,7 @@ $(document).ready(function () {
         requestAnimationFrame(() => {
             modal.css("animation", "fadeout");
             modal.css("display", "none");
+            modal.attr("aria-hidden", "true");
         });
     };
 });
