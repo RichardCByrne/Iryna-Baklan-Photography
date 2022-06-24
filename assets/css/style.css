@@ -106,19 +106,9 @@ div.col, div.row {
         opacity: 1;
     }
     to {
-        opacity: 2;
+        opacity: 0;
     }
 }
-
-/* .modal-content {
-    margin: auto;
-    padding: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border: none;
-} */
 
 .carousel-cell {
     width: 100%;
@@ -301,23 +291,16 @@ img:not(.swiper-slide img) {
 }
 
 .main-col-images {
-    display: flex;
-    flex: 100%;
-    flex-wrap: wrap;
+    display: block;
 }
 
-.images-col {
-    flex: 50%;
-    max-width: 50%;
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.images-grid a {
     padding: 0;
-}
-
-.images-col a {
-    padding: 0;
-}
-
-.desktop-nav {
-    display: none;
 }
 
 /* Info */
@@ -326,6 +309,7 @@ img:not(.swiper-slide img) {
     flex: 100%;
     flex-wrap: wrap;
 }
+
 .info-col {
     padding-top: 1vh;
     max-width: 90%;
@@ -334,6 +318,7 @@ img:not(.swiper-slide img) {
     text-align: left;
     margin: 0 auto;
 }
+
 .info-col>p, .info-col>p>strong {
     font-size: 1.7rem;
     color: #afabab;
@@ -446,13 +431,16 @@ i {
     main {
         top: 16vh;
     }
+
     h1 {
         font-size: 6rem;
         margin: 3rem 3rem 4rem .2rem;
     }
+
     .bottom-line-col {
         margin: 0 auto;
     }
+
     hr#bottom-line {
         color: #fce711;
         border-top: #fce711 .1rem solid;
@@ -460,30 +448,12 @@ i {
         margin-top: 10rem;
         margin-bottom: 3rem;
     }
+
     /* Images */
     img {
         padding: 6rem;
     }
-    .main-col-images {
-        flex: 33%;
-    }
-    .mobile-title {
-        display: none;
-    }
-    .desktop-title {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: -1%;
-        margin: 0;
-        transform: translateX(-50%);
-        width: 100%;
-    }
-    .images-col {
-        flex: 33%;
-        max-width: 33%;
-        position: relative;
-    }
+
     .portrait {
         padding: 6rem 11rem;
     }
@@ -496,14 +466,17 @@ i {
     h1 {
         font-size: 6.5rem;
     }
+
     main {
         margin: 0 3rem;
     }
+
     .bottom-line-col {
         flex: 75%;
         max-width: 75%;
         margin-left: 21.15%;
     }
+
     .social-icons {
         flex: 75%;
         max-width: 75%;
@@ -511,6 +484,7 @@ i {
         margin-right: 6.5%;
         margin-bottom: 1.5rem;
     }
+
     hr#bottom-line {
         color: #fce711;
         border-top: #fce711 .1rem solid;
@@ -518,6 +492,7 @@ i {
         margin-top: 5rem;
         margin-bottom: 3rem;
     }
+
     /* Nav */
     .desktop-nav {
         display: flex;
@@ -531,52 +506,71 @@ i {
         left: 0;
         z-index: 1;
     }
+
     #logo {
         position: fixed;
         margin: 4rem 4rem;
     }
+
     #burger {
         display: none;
     }
+
     #projects {
         margin: 0;
     }
+
     #projects-sub {
         visibility: hidden;
     }
+
     li {
         list-style-type: none;
         padding: .23rem 2rem .23rem 5.5rem;
         font-size: 2rem;
     }
+
     #projects-sub li {
         padding: .23rem 2rem .23rem 0;
         text-align: left;
     }
+
     #projects-sub li a {
         font-size: 1.6rem;
         font-weight: 200;
         padding: .1rem 0;
         white-space: nowrap;
     }
+
     .nav-col {
-        flex: 20%;
         max-width: 20%;
     }
+
     /* Images */
     .main-col-images {
         flex: 25%;
     }
-    .images-col {
-        flex: 25%;
-        max-width: 25%;
+
+    .section-heading {
+        margin-left: 20%;
+        margin-right: 5%;
     }
+    
+    .images-grid {
+        max-width: 80%;
+        grid-template-columns: repeat(3, 33.3%);
+        margin-left: 20%;
+        margin-right: 5%;
+        justify-self: center;
+    }
+
     /* Info */
     .main-col-info {
         display: flex;
         flex: 100%;
         flex-wrap: wrap;
     }
+
     .info-col {
         padding-top: 4.4vh;
         max-width: 55%;
@@ -584,31 +578,38 @@ i {
         flex-wrap: wrap;
         text-align: left;
     }
+
     .info-col>p, .info-col>p>strong {
         font-size: 1.7rem;
         color: #afabab;
     }
+
     #info-table {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
     }
+
     tr, th, td {
         font-size: 1.7rem;
         color: #afabab;
         font-weight: 400;
         vertical-align: top;
     }
+
     th {
         width: 13%;
     }
+
     td>a {
         padding: 0;
         color: #fce711;
     }
+
     .info-year {
         width: 13%;
     }
+
     hr#info-line {
         color: #fce711;
         border-top: #fce711 .1rem solid;
@@ -616,10 +617,12 @@ i {
         margin-top: 5rem;
         margin-bottom: 3rem;
     }
+
     hr#info-bottom-line {
         visibility: hidden;
         margin-bottom: 2.5rem;
     }
+
     /* Modal */
     img.modal-content {
         padding: 8rem 0;
