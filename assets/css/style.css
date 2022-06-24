@@ -303,6 +303,10 @@ img:not(.swiper-slide img) {
     padding: 0;
 }
 
+.desktop-nav {
+    display: none;
+}
+
 /* Info */
 .main-col-info {
     display: flex;
