@@ -1,5 +1,15 @@
 $(document).ready(function () {
-    // Desktop Navigation Sub Menu Visibility
+    // ---------------------------------------------------------------------------- General
+    
+    // Image No Right Click
+    $(document).click(function(e) {
+        if (e.button === 2) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // ---------------------------------------------------------------------------- Desktop Navigation Sub Menu Visibility
     
     $("#projects").mouseover(function() {
         $("#projects-sub").css("visibility", "visible");
@@ -22,7 +32,7 @@ $(document).ready(function () {
 
     $("#projects-sub").css("visibility", "hidden");
 
-    // Mobile Burger Icon
+    // ---------------------------------------------------------------------------- Mobile Burger Icon
     // Show
     $("#burger").click(function () {
         let sidebar = $(".sidebar");
@@ -46,52 +56,45 @@ $(document).ready(function () {
         }, 400);
     });
 
-    // Image No Right Click
-    $(document).click(function(e) {
-        if (e.button === 2) {
-            e.preventDefault();
-            return false;
-        }
-    });
+    // ---------------------------------------------------------------------------- Image Modal
+    const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
+    const modal = $(".modal");
+    const close = $(".close")[0];
 
-    // Image Modal
     // Initialise Swiper
-    const swiper = new Swiper(".swiper", {
-        // effect: "fade",
-        slidesPerView: 1,
-        centeredSlides: true,
-        grabCursor: true,
-        hashNavigation: {
-            watchState: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        }
-    });
-
-    // Get clicked-on image's source
-    $(document).click(function(e) {
-        const isNotHomepage = (!window.location.href.endsWith("index.html") || !window.location.pathname.endsWith("/"));
-        if (isNotHomepage) {
-            const modal = $(".modal");
-            const element = e.target;
-            const close = $(".close")[0];
-            
-            if (element.nodeName === "IMG") {
-                const modal = $(".modal");
-                
-                modal.css("display", "block");
-
-                close.onclick = function() {
-                    modal.css("display", "none");
-                };
+    if (isNotHomepage) {
+        const swiper = new Swiper(".swiper", {
+            // effect: "fade",
+            slidesPerView: 1,
+            centeredSlides: true,
+            grabCursor: true,
+            hashNavigation: {
+                watchState: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             }
+        });
+    }
 
-            close.onclick = function() {
-                modal.css("animation", "fadeout");
-                modal.css("display", "none");
-            };
+    // Display modal when clicking on project image
+    $(document).click(function(e) {
+        if (isNotHomepage) {
+            const element = e.target;            
+            if (element.nodeName === "IMG") {      
+                requestAnimationFrame(() => {
+                    modal.css("display", "block");
+                });          
+            }
         }
     });
+
+    // Close Modal
+    close.onclick = function() {
+        requestAnimationFrame(() => {
+            modal.css("animation", "fadeout");
+            modal.css("display", "none");
+        });
+    };
 });
