@@ -3,6 +3,7 @@
 @font-face {
     font-family: "Harabara";
     src: url("/assets/fonts/Harabara_Mais_Demo.otf");
+    font-display: swap;
 }
 
 /* ------------------------------------------- General */
