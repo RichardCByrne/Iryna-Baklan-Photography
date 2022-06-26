@@ -297,10 +297,16 @@ img:not(.swiper-slide img) {
 .images-grid {
     display: grid;
     grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-items: center;
 }
 
 .images-grid a {
     padding: 0;
+}
+
+.portrait {
+    padding: 3rem;
 }
 
 .desktop-nav {
@@ -637,7 +643,7 @@ i {
 
 @media screen and (min-width: 2000px) {
     * {
-        font-size: 11px;
+        font-size: 15px;
     }
 }
 
