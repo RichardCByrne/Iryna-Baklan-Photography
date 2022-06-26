@@ -403,6 +403,23 @@ i {
     font-size: 2.5rem;
 }
 
+/* ------------------------------------------- >= 768px */
+
+@media screen and (min-width: 768px) {
+    /* Info */
+    .info-col-1 {
+        width: 16%;
+    }
+
+    .info-col-2 {
+        width: 15%;
+    }
+
+    .info-col-3 {
+        width: 79%;
+    }
+}
+
 /* ------------------------------------------- >= 992px */
 
 @media screen and (min-width: 992px) {
@@ -571,6 +588,18 @@ i {
         width: 100%;
         border-collapse: collapse;
         text-align: left;
+    }
+
+    .info-col-1 {
+        width: 16%;
+    }
+
+    .info-col-2 {
+        width: 15%;
+    }
+
+    .info-col-3 {
+        width: 79%;
     }
 
     tr, th, td {
