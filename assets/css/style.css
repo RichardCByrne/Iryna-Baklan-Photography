@@ -150,6 +150,7 @@ img.modal-content:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    padding: 5rem;
 }
 
 img:not(.swiper-slide img) {
@@ -434,6 +435,10 @@ i {
 
     .portrait {
         padding: 6rem 11rem;
+    }
+    
+    .swiper-image {
+        padding: 6rem;
     }
 }
 
